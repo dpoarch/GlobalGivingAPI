@@ -1,0 +1,17 @@
+
+
+<nb-layout-header fixed>
+    <input type="text" nbInput fullWidth shape="round" placeholder="Search.." [(ngModel)]="search" >
+</nb-layout-header>
+
+<nb-card class="main-card">
+   <nb-card-body>
+    <h4 class="font-family-secondary">List View</h4>
+    <nb-card *ngFor="let project of showProject | filter: search">
+        <nb-card-body>
+            <h6>{{project.id}} - {{project.title}}</h6>
+        </nb-card-body>
+    </nb-card>
+   </nb-card-body>
+</nb-card>
+
